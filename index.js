@@ -8,7 +8,7 @@ let stringYearOfBirth = "";
 let stringPlaceOfLiving = "";
 let stringFavoriteSport = "";
 
-if (yearOfBirth == null) {
+if (yearOfBirth == null || yearOfBirth == "") {
     stringYearOfBirth = "Шкода, що ти не захотів ввести свій рік народження.";
 } else if (yearOfBirth <= currentYear) {
     stringYearOfBirth = `Тобі ${currentYear - yearOfBirth} років.`;
@@ -16,7 +16,7 @@ if (yearOfBirth == null) {
     stringYearOfBirth = "Вибач, я не зміг зрозуміти твій рік народження.";
 }
 
-if (placeOfLiving == null) {
+if (placeOfLiving == null || placeOfLiving == "") {
     stringPlaceOfLiving = "Шкода, що ти не захотів ввести назву міста.";
 } else if (placeOfLiving == "Лондон" || placeOfLiving == "Вашингтон" || placeOfLiving == "Київ") {
     switch (placeOfLiving) {
@@ -34,7 +34,7 @@ if (placeOfLiving == null) {
     stringPlaceOfLiving = `Ти живеш у місті ${placeOfLiving}.`;
 }
 
-if (favoriteSport == null) {
+if (favoriteSport == null || favoriteSport == "") {
     stringFavoriteSport = "Шкода, що ти не захотів ввести улюблений вид спорту.";
 } else if (favoriteSport === "Футбол" || favoriteSport === "Баскетбол" || favoriteSport === "Хокей") {
     switch (favoriteSport) {
